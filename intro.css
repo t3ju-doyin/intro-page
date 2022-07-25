@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+}
+body ul {
+  list-style: none;
+}
+body ul li {
+  cursor: pointer;
+  color: hsl(0deg, 0%, 41%);
+}
+body ul .register {
+  border: 1px solid hsl(0deg, 0%, 41%);
+  padding: 0.7rem 1rem;
+  border-radius: 13px;
+}
+body ul li:hover {
+  color: hsl(0deg, 0%, 8%);
+  transition: 0.3s;
+}
+body ul .register:hover {
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+
+body::before {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(35, 34, 34, 0.7215686275);
+}
+
+header div.header-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-inline: auto;
+}
+header div.header-container .logo img {
+  margin-top: 0.5rem;
+  max-width: 90%;
+}
+header div.mobile-navigation img {
+  cursor: pointer;
+  max-width: 100%;
+}
+header nav .nav-container {
+  position: relative;
+}
+header nav .without-mobile-menu {
+  display: none;
+  position: fixed;
+  background-color: hsl(0deg, 0%, 98%);
+  z-index: 999;
+  top: 0;
+  right: 0;
+  padding: 5.3rem 1.5rem 0 1.5rem;
+  width: 65%;
+  height: 100%;
+}
+header nav .without-mobile-menu .list-with-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .without-mobile-menu > ul li {
+  margin-bottom: 1.5rem;
+}
+header nav .without-mobile-menu ul.right-end-nav {
+  margin-top: 2.7rem;
+  text-align: center;
+}
+header nav .without-mobile-menu ul.right-end-nav > li {
+  margin-bottom: 1rem;
+}
+header nav .dropdown-list {
+  display: none;
+}
+header nav .dropdown-list ul {
+  margin: 2rem 0 2rem 1.3rem;
+}
+header nav .dropdown-list .sub-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .arrows {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+header nav #arrow-up {
+  display: none;
+}
+header nav #mobile-menu-exit {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+main {
+  position: relative;
+}
+main section.hero-image-section .hero-image {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+main section.hero-image-section #desktop-hero-image {
+  display: none;
+}
+main section.hero-description div.description {
+  padding-inline: 1rem;
+  text-align: center;
+}
+main section.hero-description div.description h1 {
+  font-size: 2rem;
+  word-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  color: hsl(0deg, 0%, 8%);
+}
+main section.hero-description div.description p.story {
+  font-size: 0.9rem;
+  word-spacing: 0.1rem;
+  line-height: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: hsl(0deg, 0%, 41%);
+}
+main section.hero-description div.description p.learn-more {
+  margin-bottom: 2.5rem;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  display: inline-block;
+  padding: 0.9rem 1.3rem;
+  border-radius: 14px;
+  cursor: pointer;
+}
+main section.hero-description div.description p.learn-more:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+  border: 1px solid hsl(0deg, 0%, 41%);
+  transition: 0.4s;
+}
+main section.hero-description div.footer {
+  margin-bottom: 4rem;
+}
+main section.hero-description div.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  max-width: 350px;
+}
+
+@media (min-width: 510px) and (max-width: 800px) {
+  main {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    margin-bottom: 3rem;
+  }
+  header div.header-container {
+    display: flex;
+    gap: 3rem;
+  }
+  header div.header-container .logo {
+    flex-basis: 10%;
+  }
+  header div.header-container .mobile-navigation {
+    display: none;
+  }
+  header div.header-container .dropdown-list {
+    top: 0.1rem;
+    position: relative;
+  }
+  header div.header-container .dropdown-list ul {
+    box-shadow: 1px 6px 26px 0px rgba(207, 198, 198, 0.75);
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    position: absolute;
+    border-radius: 7px;
+  }
+  header div.header-container .dropdown-list ul li .sub-list {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  header div.header-container .dropdown-list .dropdown-list-with-images {
+    right: -0.3rem;
+    padding: 1.2rem;
+  }
+  header div.header-container .dropdown-list .dropdown-list-without-images {
+    right: -2rem;
+    padding: 1.5rem;
+  }
+  header div.header-container nav {
+    width: 100%;
+    margin-top: 0.2rem;
+  }
+  header div.header-container nav .without-mobile-menu {
+    width: 100%;
+    padding: 0;
+    display: flex !important;
+    position: initial;
+    align-items: center;
+  }
+  header div.header-container nav .without-mobile-menu > ul li {
+    margin-bottom: 0;
+  }
+  header div.header-container nav .without-mobile-menu ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  header div.header-container nav .without-mobile-menu .list-with-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  header div.header-container nav .without-mobile-menu .right-end-nav {
+    margin: 0;
+    align-items: center;
+    justify-content: flex-end !important;
+    margin-left: auto;
+  }
+  header div.header-container nav .without-mobile-menu .right-end-nav li {
+    margin: 0;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    max-width: 740px;
+    flex-direction: row-reverse;
+    margin-bottom: 3rem !important;
+    margin-inline: auto;
+    gap: 3rem;
+    width: 80%;
+  }
+  main section.hero-image-section #desktop-hero-image {
+    display: block !important;
+    flex-basis: 6%;
+    max-width: 100%;
+  }
+  main section.hero-image-section #mobile-hero-image {
+    display: none;
+  }
+  main section.hero-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 7rem;
+  }
+  main section.hero-description .description {
+    text-align: left !important;
+  }
+  main section.hero-description .description h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  main section.hero-description .description p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+  }
+  main section.hero-description .description span {
+    display: block;
+  }
+  main section.hero-description .description .learn-more {
+    margin-top: 2rem;
+  }
+  main section.hero-description .footer {
+    margin: 0 !important;
+    padding-bottom: 3rem !important;
+  }
+  main section.hero-description .footer .footer-container {
+    margin: 0 !important;
+  }
+}/*# sourceMappingURL=intro.css.map */
